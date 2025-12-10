@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="fruit">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Mango</option>
+        <option>Grapes</option>
+    </select>
+    <button onclick="pick()">Select</button>
+    <p id="output"></p>
+    <script>
+        function pick() {
+            let f = fruit.value;
+            let out = document.getElementById("output"); // FIXED
+
+            out.innerHTML = "You selected: " + f;
+
+            // Change color based on fruit
+            if (f === "Apple") {
+                out.style.color = "red";
+            } else if (f === "Banana") {
+                out.style.color = "gold";
+            } else if (f === "Mango") {
+                out.style.color = "orange";
+            } else if (f === "Strawberry") {
+                out.style.color = "crimson";
+            } else {
+                out.style.color = "black"; // default
+            }
+        }
+    </script>
+</body>
+
+</html>

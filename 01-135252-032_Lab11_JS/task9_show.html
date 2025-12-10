@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile Output</title>
+</head>
+
+<body>
+    <h2>Your Profile Summary</h2>
+    <p id="output"></p>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let name = params.get("name");
+        let age = params.get("age");
+        let hobby = params.get("hobby");
+        let color = params.get("color");
+        const output = document.getElementById("output");
+
+        output.innerHTML =
+            "Name: " + name + "<br>" +
+            "Age: " + age + "<br>" +
+            "Favorite Hobby: " + hobby + "<br>" +
+            "Favourite Color: " + color;
+        output.style.border = "2px solid black";
+        output.style.padding = "20px";
+        output.style.backgroundColor = "beige";
+        output.style.color = "black";
+        output.style.display = "inline-block"; 
+    </script>
+</body>
+
+</html>
